@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "53d92d32b3577cf41b31",
+    "revision": "598985868f8383f04103",
     "url": "/ramdalive/static/css/main.da2d405e.chunk.css"
   },
   {
-    "revision": "53d92d32b3577cf41b31",
-    "url": "/ramdalive/static/js/main.53d92d32.chunk.js"
+    "revision": "598985868f8383f04103",
+    "url": "/ramdalive/static/js/main.59898586.chunk.js"
   },
   {
     "revision": "fa92c112869d3657d47b",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/ramdalive/static/media/logo.5d5d9eef.svg"
   },
   {
-    "revision": "ea11522dafe9663a94a117132e09fc41",
+    "revision": "2cdcaef3c0b7d268fc1ba53ecfb8b8de",
     "url": "/ramdalive/index.html"
   }
 ];
