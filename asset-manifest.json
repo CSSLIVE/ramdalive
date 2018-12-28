@@ -1,14 +1,13 @@
 {
-  "main.css": "/ramdalive/static/css/main.da2d405e.chunk.css",
-  "main.js": "/ramdalive/static/js/main.59898586.chunk.js",
-  "main.js.map": "/ramdalive/static/js/main.59898586.chunk.js.map",
-  "static/js/1.fa92c112.chunk.js": "/ramdalive/static/js/1.fa92c112.chunk.js",
-  "static/js/1.fa92c112.chunk.js.map": "/ramdalive/static/js/1.fa92c112.chunk.js.map",
+  "main.css": "/ramdalive/static/css/main.b13b4256.chunk.css",
+  "main.js": "/ramdalive/static/js/main.92c38e71.chunk.js",
+  "main.js.map": "/ramdalive/static/js/main.92c38e71.chunk.js.map",
+  "static/js/1.b492f45a.chunk.js": "/ramdalive/static/js/1.b492f45a.chunk.js",
+  "static/js/1.b492f45a.chunk.js.map": "/ramdalive/static/js/1.b492f45a.chunk.js.map",
   "runtime~main.js": "/ramdalive/static/js/runtime~main.e03205c1.js",
   "runtime~main.js.map": "/ramdalive/static/js/runtime~main.e03205c1.js.map",
-  "static/media/logo.svg": "/ramdalive/static/media/logo.5d5d9eef.svg",
-  "static/css/main.da2d405e.chunk.css.map": "/ramdalive/static/css/main.da2d405e.chunk.css.map",
+  "static/css/main.b13b4256.chunk.css.map": "/ramdalive/static/css/main.b13b4256.chunk.css.map",
   "index.html": "/ramdalive/index.html",
-  "precache-manifest.cb2a3a4c6bf9ac3cc5e985e0025a4599.js": "/ramdalive/precache-manifest.cb2a3a4c6bf9ac3cc5e985e0025a4599.js",
+  "precache-manifest.d50f8e61b334c844b0d12a48d10400d5.js": "/ramdalive/precache-manifest.d50f8e61b334c844b0d12a48d10400d5.js",
   "service-worker.js": "/ramdalive/service-worker.js"
 }
