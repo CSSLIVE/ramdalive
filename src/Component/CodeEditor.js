@@ -14,6 +14,8 @@ import {
 // `;
 const CodeContainer=styled(LiveProvider)`
     width:90%;
+    display:flex;
+    flex-direction:column;
     margin:0 auto;
     background-color:'#e9ecef';
     box-shadow: rgba(20, 20, 20, 0.27) 0.0555556rem 0.0555556rem 1.11111rem;
@@ -24,12 +26,14 @@ const CodeContainer=styled(LiveProvider)`
 const   Code=styled(LiveEditor)`
         
         border-radius:0px;
+        flex:1;
         
  `;       
         
   
 const  Preview=styled(LivePreview)`
       background-color:papayawhip;
+      flex:1;
       border:1px solid rgba(222,222,222,.2);
       border-radius:0px;
       padding:5px;
@@ -38,9 +42,9 @@ const  Preview=styled(LivePreview)`
       }
 `
 const  Error=styled(LiveError)`
-      
+      flex:1;
       background-color:yellow;
-      height:1fr;
+      
       border:1px solid rgba(222,222,222,.2);
       border-radius:3px;
       padding:10px;
