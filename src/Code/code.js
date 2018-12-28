@@ -7,9 +7,17 @@ const ramda1 = `
       render(<TodoList {...props} />);
   `
 
+const ramda3=`
+     const result= R.add(2, 3);
+     render(<text>{result}</text>)
+`
+
+
+
 const codes=[
               {code:ramda1,step:{step1:'step1',step2:'step2',step3:'step3'}},
               {code:ramda1,step:{step1:'step1',step2:'step2',step3:'step3'}},
+              {code:ramda3,step:{step1:'step1',step2:'step2',step3:'step3'}},
             ];
 
 export {codes};

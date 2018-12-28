@@ -13,22 +13,27 @@ import {
 //   "a a c" ;
 // `;
 const CodeContainer=styled(LiveProvider)`
-    width:90%;
-    margin:0 auto;
+    width:80%;
+    display:flex;
+    margin:15px 20px 15px 215px;
     background-color:'#e9ecef';
     box-shadow: rgba(20, 20, 20, 0.27) 0.0555556rem 0.0555556rem 1.11111rem;
     border-radius:4px;
     padding:5px;
+    overflow:hidden;
   
 `
 const   Code=styled(LiveEditor)`
-        
+        flex:2;
         border-radius:0px;
+       
         
  `;       
         
   
 const  Preview=styled(LivePreview)`
+       flex:1;
+       
       background-color:papayawhip;
       border:1px solid rgba(222,222,222,.2);
       border-radius:0px;
