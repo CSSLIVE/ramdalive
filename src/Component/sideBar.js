@@ -3,6 +3,8 @@ import React,{Component} from "react";
 import styled from 'styled-components';
 import { InputGroup, InputGroupAddon,Input ,ListGroup,ListGroupItem,Badge} from 'reactstrap';
 import  * as R from 'ramda';
+
+
 const getType=(type)=>{
     let color="";
    switch (type) {
@@ -19,22 +21,7 @@ const getType=(type)=>{
   return color;
 };
 
-
- 
-// const SearchInput=(props)=>(
-//     <Block>
-//     <InputGroup>
-       
-//        <Input placeholder="Filter"  onChange={() => this.setState({searchinput: 'a'})}/>
-//        <InputGroupAddon addonType="append">@</InputGroupAddon>
-//      </InputGroup>
-//     </Block>
-      
-// )
-
-
-
- const  SearchInput=(porps)=> {
+const  SearchInput=(props)=> {
   return (
     <Block>
     <InputGroup>
@@ -44,11 +31,7 @@ const getType=(type)=>{
       </InputGroup>
     </Block>
   )
-  
 }
-
-
-
 
 const  SideBarContainer=styled.div`
        width:250px;
@@ -58,9 +41,7 @@ const  SideBarContainer=styled.div`
        top:100;
        background-color:rgba(255, 255, 255, 1);
        border:1px solid rgba(94, 254, 250, 0.2);
-       
-
-`
+`      
 const StyledListGroupItem=styled(ListGroupItem)`
     display:flex;
     flex-direction:row;
@@ -85,9 +66,11 @@ const  StyledBadge=styled(Badge)`
 
 const  SearchList=(props)=>{
      
-     const categories=props.content;
+   const categories=props.content;
      
-    return ( <Block>
+    return ( 
+      
+    <Block>
      <ListGroup>
 
      {
@@ -108,20 +91,28 @@ const  SearchList=(props)=>{
         )
        }) 
      }
-     
-     
-   </ListGroup>
+    </ListGroup>
      </Block>
     )
-}
-const SearchBar=(props)=>(
+    };
 
-    <SideBarContainer {...props}>
-      <SearchInput />
-      <SearchList {...props}/>
-    </SideBarContainer>
-)
-
+class SearchBar extends Component {
+    constructor(props) {
+      super(props);
+       this.state={
+         searchinput:null
+       }
+    }
+   render(props) {
+     return (
+            <SideBarContainer {...props}>
+            <SearchInput {...props}/>
+            <SearchList {...props}/>
+            </SideBarContainer>
+     )
+   }
+ }
+ 
 
 // class  SideBar extends Component {
     
