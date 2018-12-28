@@ -5,7 +5,7 @@ import * as R from 'ramda';
 import styled from 'styled-components';
 import { Provider,Block,Box } from "reakit";
 import theme from "reakit-theme-default";
-import  {SideBarContainer,SearchBar} from "./Component/sideBar";
+import  {SideBarContainer,SearchBar,SideBar} from "./Component/sideBar";
 import {MainNav} from './Component/NavBar';
 import  {ramdaCategory} from './Code/ramda_category'
 const scope={R,styled}
