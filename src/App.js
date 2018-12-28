@@ -1,28 +1,24 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-class App extends Component {
+import React, { Component } from 'react'
+import {CodeEditor} from './Component/CodeEditor';
+import {codes} from './Code/code';
+import * as R from 'ramda';
+import styled from 'styled-components';
+import { Provider,Box } from "reakit";
+import theme from "reakit-theme-default";
+const scope={R,styled}
+export default class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>SRC/App.js</code> Hello  GOOD
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+      <Provider theme={theme}>
+      <Box color="red">
+      
+      
+       {  codes.map((code,i)=>(
+              <CodeEditor code={code.code} scope={scope} ></CodeEditor>
+          )) 
+        }
+        </Box>
+      </Provider>
+    )
   }
 }
-
-export default App;
