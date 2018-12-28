@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/ramdalive/precache-manifest.d50f8e61b334c844b0d12a48d10400d5.js"
+  "/ramdalive/precache-manifest.6bd29e024ad884a6188707de23e51128.js"
 );
 
 workbox.clientsClaim();
