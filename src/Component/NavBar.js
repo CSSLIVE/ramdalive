@@ -32,7 +32,7 @@ import {
     render() {
       return (
     <Navbar color="primary" light expand="md" fixed="fixed">
-          <NavbarBrand href="/"><img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fydfma0phej307f08cdft.jpg" style={{height:50,width:50,borderRadius:25}}alt={'brand'} /></NavbarBrand>
+          <NavbarBrand href="/"><img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fydfma0phej307f08cdft.jpg" style={{height:40,width:40,borderRadius:20}}alt={'brand'} /></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
          <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-right" navbar>

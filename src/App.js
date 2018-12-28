@@ -7,7 +7,7 @@ import { Provider,Block,Box } from "reakit";
 import theme from "reakit-theme-default";
 import  {SideBarContainer,SearchBar} from "./Component/sideBar";
 import {MainNav} from './Component/NavBar';
-
+import  {ramdaCategory} from './Code/ramda_category'
 const scope={R,styled}
 export default class App extends Component {
   render() {
@@ -19,7 +19,7 @@ export default class App extends Component {
       </Block>
       
       <Block>
-         <SearchBar/>
+         <SearchBar content={ramdaCategory.catetory}/>
       </Block>
       <Block color="red">
      

@@ -1,7 +1,8 @@
 import {Block } from "reakit";
 import React from "react";
 import styled from 'styled-components';
-import { InputGroup, InputGroupAddon,Input ,ListGroup,ListGroupItem} from 'reactstrap';
+import { InputGroup, InputGroupAddon,Input ,ListGroup,ListGroupItem,Badge} from 'reactstrap';
+
 
 const SearchInput=()=>(
     <Block>
@@ -17,7 +18,7 @@ const SearchInput=()=>(
 
 
 const  SideBarContainer=styled.div`
-       width:200px;
+       width:250px;
        height:100%;
        position:absolute;
        left:0;
@@ -27,24 +28,58 @@ const  SideBarContainer=styled.div`
        
 
 `
+const StyledListGroupItem=styled(ListGroupItem)`
+    display:flex;
+    flex-direction:row;
+    justify-content:'space-between';
+    :hover{
+        background-color:rgba(95, 98, 104, 0.4);
+        transition: background-color 1s;
+    }
+`
+const  SearchListItem=styled.div`
+       display:inline-block;
+       flex:1;
 
-const  SearchList=(props)=>(
+`
 
-     <Block>
+
+      
+
+const  SearchList=(props)=>{
+     
+     const categories=props.content
+     console.log(categories);
+    return ( <Block>
      <ListGroup>
-     <ListGroupItem>Cras justo odio</ListGroupItem>
-     <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-     <ListGroupItem>Morbi leo risus</ListGroupItem>
-     <ListGroupItem>Porta ac consectetur ac</ListGroupItem>
-     <ListGroupItem>Vestibulum at eros</ListGroupItem>
+
+     {
+       categories.map((cat,index)=>(
+
+         <StyledListGroupItem>
+           <SearchListItem>
+              <text >{cat.url}</text>
+           </SearchListItem>
+           <SearchListItem>
+           <Badge color="primary" >{cat.title}</Badge>  
+           </SearchListItem>
+          
+          
+         </StyledListGroupItem>
+
+       )) 
+     }
+     
+     
    </ListGroup>
      </Block>
-)
+    )
+}
 const SearchBar=(props)=>(
 
-    <SideBarContainer>
+    <SideBarContainer {...props}>
       <SearchInput />
-      <SearchList/>
+      <SearchList {...props}/>
     </SideBarContainer>
 )
 

@@ -13,9 +13,9 @@ import {
 //   "a a c" ;
 // `;
 const CodeContainer=styled(LiveProvider)`
-    width:80%;
+    width:75%;
     display:flex;
-    margin:15px 20px 15px 215px;
+    margin:15px 20px 15px 265px;
     background-color:'#e9ecef';
     box-shadow: rgba(20, 20, 20, 0.27) 0.0555556rem 0.0555556rem 1.11111rem;
     border-radius:4px;
