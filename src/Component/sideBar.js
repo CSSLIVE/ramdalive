@@ -1,5 +1,5 @@
 import {Block } from "reakit";
-import React ,{Component}from "react";
+import React from "react";
 import styled from 'styled-components';
 import { InputGroup, InputGroupAddon,Input ,ListGroup,ListGroupItem,Badge} from 'reactstrap';
 import  * as R from 'ramda';
