@@ -1,5 +1,5 @@
 import React ,{Component}from 'react'
-import styled from 'styled-components';
+
 import {
     Collapse,
     Navbar,
@@ -14,7 +14,7 @@ import {
     DropdownItem,
 } from 'reactstrap';
 
- class Navigator extends  Component{
+ class MainNav extends  Component{
         constructor(props) {
             super(props);
         
@@ -66,10 +66,5 @@ import {
     }
 
  }
-
- const MainNav=styled(Navigator)`
-   display:fixed;
- 
- `
  
 export  {MainNav} ;

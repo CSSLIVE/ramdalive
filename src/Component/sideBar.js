@@ -1,5 +1,5 @@
 import {Block } from "reakit";
-import React,{Component} from "react";
+import React ,{Component}from "react";
 import styled from 'styled-components';
 import { InputGroup, InputGroupAddon,Input ,ListGroup,ListGroupItem,Badge} from 'reactstrap';
 import  * as R from 'ramda';
@@ -26,9 +26,9 @@ const  SearchInput=(props)=> {
     <Block>
     <InputGroup>
        
-       <Input placeholder="Filter"  onChange={() => this.setState({searchinput: 'a'})}/>
+       <Input placeholder="Filter" />
        <InputGroupAddon addonType="append">@</InputGroupAddon>
-      </InputGroup>
+     </InputGroup>
     </Block>
   )
 }
@@ -40,8 +40,10 @@ const  SideBarContainer=styled.div`
        left:0;
        top:100;
        background-color:rgba(255, 255, 255, 1);
-       border:1px solid rgba(94, 254, 250, 0.2);
-`      
+       border:1px solid rgba(94, 254, 250, 1);
+       
+
+`
 const StyledListGroupItem=styled(ListGroupItem)`
     display:flex;
     flex-direction:row;
@@ -57,11 +59,7 @@ const  SearchListItem=styled.div`
 
 `
 
-const  StyledBadge=styled(Badge)`
-    display:inline-block;
-    width:50;
-    
-`
+
       
 
 const  SearchList=(props)=>{
@@ -74,86 +72,44 @@ const  SearchList=(props)=>{
      <ListGroup>
 
      {
-       categories.map((cat,index)=>{
+       categories.map((cat,index)=>(
 
-        let color=getType(cat.title)
-
-        return ( <StyledListGroupItem>
+         <StyledListGroupItem>
            <SearchListItem>
               <text >{cat.url}</text>
            </SearchListItem>
            <SearchListItem>
-             <StyledBadge color={color}>{cat.title}</StyledBadge>  
+           <Badge color={getType(cat.title)} >{cat.title}</Badge>  
            </SearchListItem>
           
           
          </StyledListGroupItem>
-        )
-       }) 
+
+       )) 
      }
     </ListGroup>
      </Block>
     )
     };
 
-class SearchBar extends Component {
-    constructor(props) {
-      super(props);
-       this.state={
-         searchinput:null
-       }
-    }
-   render(props) {
-     return (
-            <SideBarContainer {...props}>
-            <SearchInput {...props}/>
-            <SearchList {...props}/>
-            </SideBarContainer>
-     )
-   }
- }
+
  
 
-// class  SideBar extends Component {
-    
-//   constructor (props) {
-//     super(props);
-//     this.setState({"List":props.content});
-//     this.setState({"searchinput":""});
-//     //this.searchUpdated=this.searchUpdated.bind(this);
-//   }
-  
-  
 
+const SearchBar = (props) => {
+  const content=props.content
+  return (
+    
+    <SideBarContainer>
+    <SearchInput />
+    <SearchList content={content}/>
+    </SideBarContainer>
   
-//   render(props) {
-    
-    
-//     return (
-//       <SideBarContainer {...props}>
-//          <SearchInput />
-//          <SearchList {...props}/>
-//       </SideBarContainer>
-//     )
-//   };
-
-//   // const  searchUpdated=(e)=>{
-
-//   //   this.setState({'searchinput':e.text})
-//   // } 
-// };
+  )
+}
 
 
 
 
 
 export {SideBarContainer,SearchBar} ;
-
-
-// [
-//   {username: 'bob', age: 30, tags: ['work', 'boring']},
-//   {username: 'jim', age: 25, tags: ['home', 'fun']},
-//   {username: 'jane', age: 30, tags: ['vacation', 'fun']}
-// ]
-
-// R.filter(R.where({tags: R.contains('fun')}),arr)
