@@ -7,3 +7,12 @@ after_success:
  - git remote rm origin
  - git remote add origin https://phpsmarter:${90dc7364acc10fe7e3283d47676e501d258e5c65}@github.com/CSSLIVE/ramdalive.git
  - npm run deploy
+
+
+ notifications:
+  email:
+    - 3238355967@qq.com
+    - mycodegit@gmail.com
+
+    on_success: change # default: change
+    on_failure: always # default: always
